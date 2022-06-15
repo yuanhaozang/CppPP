@@ -1,0 +1,34 @@
+#include <iostream>
+#include "tabtenn1.h"
+using namespace std;
+
+int main()
+{
+    TableTennisPlayer player1("Tara", "Boomdea", false);
+    RatedPlayer rplayer1(1140, "Mallory", "Duck", true);
+
+    rplayer1.Name();    //derived object base method
+    if(rplayer1.HasTable())
+        cout<<": has a table\n";
+    else
+        cout<<": hasn't a table\n";
+
+    player1.Name(); //base object
+    if(player1.HasTable())
+        cout<<": has a table\n";
+    else    
+        cout<<": hasn't a table\n";
+
+    cout<<"Name: ";
+    rplayer1.Name();
+    cout<<"; rating: "<<rplayer1.Rating()<<endl;
+
+
+    RatedPlayer rplayer2(1212, player1);
+    cout<<"Name: ";
+    rplayer2.Name();
+    cout<<"rating: "<<rplayer2.Rating()<<endl;
+
+
+    return 0;
+}
