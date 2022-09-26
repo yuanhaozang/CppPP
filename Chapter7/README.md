@@ -4,7 +4,7 @@
 int age=20;
 const int *pt=&age;
 (*pt)++ //error 
-++age;  //此时*pt也等于11
+++age;  //此时*pt也等于21
 
 ```
 ```C++
